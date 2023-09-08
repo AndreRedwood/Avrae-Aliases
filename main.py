@@ -6,17 +6,17 @@ if &ARGS&:
     try: 
         int(&ARGS&[0])
     except "ValueError":
-        T = "Wymagana liczba całkowita!"
+        text = "Wymagana liczba całkowita!"
         return
     value = int(&ARGS&[0])
     if value < 0 and -value > points:
-        T = "Nie wystarczająco punktów!"
+        text = "Nie wystarczająco punktów!"
         return
     points += value
     character().set_cvar("downtimePoints", points)
-    T=f"{points} ({'+' if value >= 0 else ''}{value})"
+    text = f"{points} ({'+' if value >= 0 else ''}{value})"
 else:
-    T=points
+    text = points
 </drac2>
 -title "Downtime Points"
--desc "{{T}}"
+-desc "{{text}}"
