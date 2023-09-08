@@ -1,10 +1,19 @@
 !alias dt embed
 <drac2>
 character().set_cvar_nx("downtimePoints", 0)
-T=int(downtimePoints)
+points = int(downtimePoints)
 if &ARGS&:
-    T=&ARGS&[0]
+    try: 
+        int(&ARGS&[0])
+    except "ValueError":
+        T = "Wymagana liczba całkowita!"
+        return
+    value = int(&ARGS&[0])
+    if value < 0 and -value > points:
+        T = "Nie wystarczająco punktów!"
+        return
+    T=value
 else:
-    T:"nope"
+    T="nope"
 </drac2>
 -title "{{T}}"
