@@ -12,8 +12,11 @@ if &ARGS&:
     if value < 0 and -value > points:
         T = "Nie wystarczająco punktów!"
         return
-    T=value
+    points += value
+    character().set_cvar("downtimePoints", points)
+    T=f"{points} ({'+' if value >= 0 else ''}{value})"
 else:
-    T="nope"
+    T=points
 </drac2>
--title "{{T}}"
+-title "Downtime Points"
+-desc "{{T}}"
