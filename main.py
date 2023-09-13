@@ -4,11 +4,10 @@ character().set_cvar_nx("downtimePoints", 0)
 points = int(downtimePoints)
 if &ARGS&:
     try: 
-        int(&ARGS&[0])
+        value = int(&ARGS&[0])
     except "ValueError":
         text = "Downtime points are an integer number."
         return
-    value = int(&ARGS&[0])
     if value < 0 and -value > points:
         text = "Your Downtime Points can't be negative."
         return
