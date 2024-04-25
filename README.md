@@ -1,4 +1,4 @@
-#Avrae Aliases
+# Avrae Aliases
 Archive for code of small scripts for discord bot Avrae. Each folder is a separate project.
 
 - Downtime Pionts - alias for managing a currency called downtime points
