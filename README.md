@@ -10,10 +10,10 @@ Archive for code of small scripts for discord bot Avrae. Each folder is a separa
 ## Work in Progress
 
 - Mine - Alias for generating random encaunters on ruins expeditions, made for Ayakar discord server.
-Currently it contains the following comands:
-    testminestart - sets up an expedition
-    testminecheck - displays a status of current expedition
-    testmineend - ends an expedition
+Currently it contains the following commands:<br>
+    testminestart - sets up an expedition<br>
+    testminecheck - displays a status of current expedition<br>
+    testmineend - ends an expedition<br>
 
 
 Aliases are made using customized version of Python, called Draconic.
