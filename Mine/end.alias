@@ -1,5 +1,8 @@
 !alias testmineend embed
 <drac2>
+    using(
+        utils="408163b6-967b-47a0-9c07-9c78e9b477d1"
+    )
     ch = character()
     try:
         ch.get_cvar(expeditionStarted)
@@ -7,7 +10,7 @@
         #throw out to separate function
         gold=[ch.get_cvar("goldTreasure"),ch.get_cvar("goldCoins")]
         items=ch.get_cvar("items")
-        return f''' -title "Ekspedycja nie zaczęta." -desc "QwQ" -footer "MINE WIP"'''
+        return f''' -title "Ekspedycja nie zaczęta." -desc "QwQ"{utils.footer}'''
     else:
         ch.delete_cvar("expeditionStarted")
         ch.delete_cvar("goldTreasure")
@@ -15,5 +18,5 @@
         ch.delete_cvar("items")
         ch.delete_cvar("encaunterCurrent")
         ch.delete_cvar("encaunterHistory")
-        return f''' -title "Zakończenie ekspedycji" -desc "Ekspedycja do ruin została zakończona." -footer "MINE WIP"'''
+        return f''' -title "Zakończenie ekspedycji" -desc "Ekspedycja do ruin została zakończona."{utils.footer}'''
 </drac2>

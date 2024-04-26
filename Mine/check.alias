@@ -1,0 +1,13 @@
+!alias testminecheck embed
+<drac2>
+    using(
+        utils="408163b6-967b-47a0-9c07-9c78e9b477d1"
+    )
+    ch = character()
+    try:
+        ch.get_cvar(expeditionStarted)
+    except:
+        return f''' -title "Brak Ekspedycji" -desc "Ekspedycja do ruin jeszcze się nie zaczęła."{utils.footer}'''
+    else:
+        return utils.display_status(ch)+utils.footer
+</drac2>

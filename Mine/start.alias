@@ -1,5 +1,8 @@
 !alias testminestart embed
 <drac2>
+    using(
+        utils="408163b6-967b-47a0-9c07-9c78e9b477d1"
+    )
     ch = character()
     try:
         ch.get_cvar(expeditionStarted)
@@ -10,10 +13,7 @@
         ch.set_cvar("items", "")
         ch.set_cvar("encaunterCurrent", "")
         ch.set_cvar("encaunterHistory", "")
-        return f''' -title "Rozpoczęcie ekspedycji" -desc "Ekspedycja do ruin została przygotowana." -footer "MINE WIP"'''
+        return f''' -title "Rozpoczęcie ekspedycji" -desc "Ekspedycja do ruin została przygotowana."{utils.footer}'''
     else:
-        #throw out to separate function
-        gold=[ch.get_cvar("goldTreasure"),ch.get_cvar("goldCoins")]
-        items=ch.get_cvar("items")
-        return f''' -title "Status Ekspedycji" -desc "Złoto: {gold[0]}gp (w klejnotach) | {gold[1]}gp (w monetach)\n Przedmioty:\n {items}\n" -footer "MINE WIP"'''
+        return utils.display_status(ch)+utils.footer
 </drac2>

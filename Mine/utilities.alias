@@ -1,0 +1,6 @@
+footer=f''' -footer "Ruins expeditions alias, made by Andre"'''
+
+def display_status(ch):
+    gold=[ch.get_cvar("goldTreasure"),ch.get_cvar("goldCoins")]
+    items=ch.get_cvar("items")
+    return f''' -title "Status Ekspedycji" -desc "Złoto:\n{gold[0]}gp (w klejnotach)\n{gold[1]}gp (w monetach)\nPrzedmioty:\n {items}\n"'''
