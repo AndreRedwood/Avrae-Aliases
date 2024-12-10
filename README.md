@@ -1,19 +1,19 @@
 # Avrae Aliases
-
 Archive for code of small scripts for discord bot Avrae. Each folder is a separate project.
 
-## Completed 
+## Built With
+Visual Studio Code<br>
+Draconic (custom variant of Python)
 
+## Usage
 - Downtime Pionts - Alias for managing a currency called downtime points, used by command:
-    dt <points to add / remove>
+```
+dt <points to add / remove>
+```
+Made for Szepty Iraeboru discord server 
+  
+## Abandoned
+- Mine - Alias for generating random encounters on ruins expeditions, made for Kroniki Ayakaru discord server, abandoned due to finding another alias that does what this was intended to do.
 
-## Work in Progress
-
-- Mine - Alias for generating random encaunters on ruins expeditions, made for Ayakar discord server.
-Currently it contains the following commands:<br>
-    testminestart - sets up an expedition<br>
-    testminecheck - displays a status of current expedition<br>
-    testmineend - ends an expedition<br>
-
-
-Aliases are made using customized version of Python, called Draconic.
+## Acknowledgments
+https://avrae.readthedocs.io/ - Avrae documentation
